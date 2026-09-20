@@ -424,110 +424,201 @@ function Portfolio() {
                 Cogitate&apos;s flagship production P&amp;C insurance billing platform, supporting <strong>8+ client implementations</strong> across policy invoicing, payment gateway integrations (EPay &amp; OneInc), commission workflows, automated PDF generation, banking SFTP pipelines (Wells Fargo), Hangfire background jobs, and Azure Application Insights monitoring.
               </p>
             </div>
-            <div className="system-diagram-card" aria-label="Billing platform architecture topology">
-              <div className="diagram-topline">
-                <div className="diagram-tag">
-                  <span className="diagram-tag-pulse" />
-                  <span>Architecture Topology</span>
-                </div>
-                <span className="diagram-status">
-                  <span className="status-live-dot" />
-                  8+ Clients Live
-                </span>
-              </div>
-
+            <div className="system-diagram" aria-label="Enterprise P&amp;C Insurance Billing Platform Architecture Topology">
               <svg
-                viewBox="0 0 520 330"
-                className="topology-svg"
+                viewBox="0 0 660 520"
+                className="system-topology-svg"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
               >
                 <defs>
-                  <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="oklch(0.98 0.015 85)" />
-                    <stop offset="100%" stopColor="oklch(0.92 0.025 78)" />
+                  <linearGradient id="coreBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="rgba(255, 252, 248, 0.96)" />
+                    <stop offset="100%" stopColor="rgba(238, 226, 212, 0.92)" />
                   </linearGradient>
-                  <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="oklch(0.99 0.01 85)" />
-                    <stop offset="100%" stopColor="oklch(0.94 0.02 80)" />
+                  <linearGradient id="nodeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="rgba(255, 255, 255, 0.9)" />
+                    <stop offset="100%" stopColor="rgba(243, 236, 227, 0.85)" />
                   </linearGradient>
-                  <filter id="nodeShadow" x="-10%" y="-10%" width="120%" height="130%">
-                    <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#2c2219" floodOpacity="0.07" />
+                  <filter id="topoShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#2c2219" floodOpacity="0.08" />
+                  </filter>
+                  <filter id="coreGlow" x="-30%" y="-30%" width="160%" height="160%">
+                    <feDropShadow dx="0" dy="6" stdDeviation="12" floodColor="#C85A32" floodOpacity="0.22" />
                   </filter>
                 </defs>
 
-                {/* Concentric subtle radar rings strictly localized around central Core Hub */}
-                <circle cx="260" cy="165" r="92" stroke="var(--bronze)" strokeWidth="1" strokeDasharray="3 6" opacity="0.22" />
-                <circle cx="260" cy="165" r="74" stroke="var(--terracotta)" strokeWidth="1" strokeDasharray="2 4" opacity="0.32" />
+                {/* Grand Celestial Blueprint Geometry & Calibration Rings */}
+                <circle cx="330" cy="260" r="320" stroke="var(--bronze)" strokeWidth="0.8" opacity="0.16" />
+                <circle cx="330" cy="260" r="260" stroke="var(--bronze)" strokeWidth="1" strokeDasharray="3 6" opacity="0.28" />
+                <circle cx="330" cy="260" r="195" stroke="var(--terracotta)" strokeWidth="1.2" strokeDasharray="2 4" opacity="0.4" />
+                <circle cx="330" cy="260" r="115" stroke="var(--bronze)" strokeWidth="0.8" opacity="0.3" />
 
-                {/* Connector Lines between Core and Satellite Nodes */}
-                <line x1="260" y1="165" x2="92.5" y2="66" stroke="var(--bronze)" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.45" />
-                <line x1="260" y1="165" x2="427.5" y2="66" stroke="var(--bronze)" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.45" />
-                <line x1="260" y1="165" x2="92.5" y2="264" stroke="var(--bronze)" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.45" />
-                <line x1="260" y1="165" x2="427.5" y2="264" stroke="var(--bronze)" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.45" />
+                {/* Cardinal Axes & Precision Tick Marks */}
+                <line x1="50" y1="260" x2="610" y2="260" stroke="var(--bronze)" strokeWidth="0.75" strokeDasharray="4 6" opacity="0.22" />
+                <line x1="330" y1="20" x2="330" y2="500" stroke="var(--bronze)" strokeWidth="0.75" strokeDasharray="4 6" opacity="0.22" />
+                
+                {/* Diagonal Radial Guidance Rays */}
+                <line x1="192" y1="122" x2="468" y2="398" stroke="var(--bronze)" strokeWidth="0.6" strokeDasharray="2 4" opacity="0.18" />
+                <line x1="468" y1="122" x2="192" y2="398" stroke="var(--bronze)" strokeWidth="0.6" strokeDasharray="2 4" opacity="0.18" />
 
-                {/* Animated Signal Pulses traveling along connectors */}
+                {/* Cross-Service Data Pipeline Mesh */}
+                <line x1="468" y1="122" x2="330" y2="455" stroke="var(--bronze)" strokeWidth="1" strokeDasharray="3 4" opacity="0.32" />
+                <line x1="468" y1="398" x2="525" y2="260" stroke="var(--bronze)" strokeWidth="1" strokeDasharray="3 4" opacity="0.35" />
+                <line x1="468" y1="398" x2="135" y2="260" stroke="var(--bronze)" strokeWidth="1" strokeDasharray="3 4" opacity="0.35" />
+                <line x1="192" y1="398" x2="330" y2="455" stroke="var(--bronze)" strokeWidth="1" strokeDasharray="3 4" opacity="0.32" />
+
+                {/* Primary Radial Connectors from Billing Core to all 8 Subsystems */}
+                <line x1="330" y1="260" x2="330" y2="65" stroke="var(--terracotta)" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.55" />
+                <line x1="330" y1="260" x2="468" y2="122" stroke="var(--terracotta)" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.55" />
+                <line x1="330" y1="260" x2="525" y2="260" stroke="var(--terracotta)" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.55" />
+                <line x1="330" y1="260" x2="468" y2="398" stroke="var(--terracotta)" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.55" />
+                <line x1="330" y1="260" x2="330" y2="455" stroke="var(--terracotta)" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.55" />
+                <line x1="330" y1="260" x2="192" y2="398" stroke="var(--terracotta)" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.55" />
+                <line x1="330" y1="260" x2="135" y2="260" stroke="var(--terracotta)" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.55" />
+                <line x1="330" y1="260" x2="192" y2="122" stroke="var(--terracotta)" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.55" />
+
+                {/* Animated Real-Time High-Throughput Transaction Pulses */}
                 <circle r="3.5" fill="var(--terracotta)" opacity="0.95">
-                  <animateMotion path="M 260 165 L 92.5 66" dur="3s" repeatCount="indefinite" />
+                  <animateMotion path="M 330 260 L 330 65" dur="2.6s" repeatCount="indefinite" />
                 </circle>
                 <circle r="3.5" fill="var(--terracotta)" opacity="0.95">
-                  <animateMotion path="M 260 165 L 427.5 66" dur="3.4s" repeatCount="indefinite" />
+                  <animateMotion path="M 330 260 L 468 122" dur="3s" repeatCount="indefinite" />
                 </circle>
                 <circle r="3.5" fill="var(--terracotta)" opacity="0.95">
-                  <animateMotion path="M 260 165 L 92.5 264" dur="3.8s" repeatCount="indefinite" />
+                  <animateMotion path="M 330 260 L 525 260" dur="3.4s" repeatCount="indefinite" />
                 </circle>
                 <circle r="3.5" fill="var(--terracotta)" opacity="0.95">
-                  <animateMotion path="M 260 165 L 427.5 264" dur="3.2s" repeatCount="indefinite" />
+                  <animateMotion path="M 330 260 L 468 398" dur="2.8s" repeatCount="indefinite" />
+                </circle>
+                <circle r="3.5" fill="var(--terracotta)" opacity="0.95">
+                  <animateMotion path="M 330 260 L 330 455" dur="3.6s" repeatCount="indefinite" />
+                </circle>
+                <circle r="3.5" fill="var(--terracotta)" opacity="0.95">
+                  <animateMotion path="M 330 260 L 192 398" dur="3.2s" repeatCount="indefinite" />
+                </circle>
+                <circle r="3.5" fill="var(--terracotta)" opacity="0.95">
+                  <animateMotion path="M 330 260 L 135 260" dur="2.9s" repeatCount="indefinite" />
+                </circle>
+                <circle r="3.5" fill="var(--terracotta)" opacity="0.95">
+                  <animateMotion path="M 330 260 L 192 122" dur="3.5s" repeatCount="indefinite" />
                 </circle>
 
-                {/* Satellite Node 1: Top-Left (ASP.NET Core REST API) */}
-                <g transform="translate(20, 35)">
-                  <rect width="145" height="62" rx="8" fill="url(#nodeGrad)" stroke="var(--border)" strokeWidth="1" filter="url(#nodeShadow)" />
-                  <text x="14" y="21" fill="var(--terracotta)" fontSize="8.5" fontWeight="700" letterSpacing="0.08em">GATEWAY · REST</text>
-                  <text x="14" y="38" fill="var(--foreground)" fontSize="11.5" fontWeight="600" fontFamily="var(--font-sans)">ASP.NET Core API</text>
-                  <text x="14" y="51" fill="var(--muted-foreground)" fontSize="8.5">Policy &amp; Invoicing</text>
+                {/* Cross-Flow Pipeline Animation (Payments -> SQL Ledger) */}
+                <circle r="3" fill="var(--bronze)" opacity="0.8">
+                  <animateMotion path="M 468 122 L 330 455" dur="4.2s" repeatCount="indefinite" />
+                </circle>
+                {/* Cross-Flow Pipeline Animation (Hangfire -> SFTP) */}
+                <circle r="3" fill="var(--bronze)" opacity="0.8">
+                  <animateMotion path="M 468 398 L 525 260" dur="3.8s" repeatCount="indefinite" />
+                </circle>
+
+                {/* ================= SATELLITE NODES ================= */}
+
+                {/* Node 1: ASP.NET Core API Gateway (Top) */}
+                <g className="topo-node-group" transform="translate(330, 65)">
+                  <circle r="40" fill="url(#nodeBg)" stroke="var(--border)" strokeWidth="1.25" filter="url(#topoShadow)" />
+                  <circle r="35" fill="none" stroke="var(--bronze)" strokeWidth="0.75" strokeDasharray="2 3" opacity="0.5" />
+                  <text x="0" y="-12" textAnchor="middle" fill="var(--terracotta)" fontSize="7" fontWeight="700" letterSpacing="0.08em">GATEWAY</text>
+                  <text x="0" y="2" textAnchor="middle" fill="var(--foreground)" fontSize="10.5" fontWeight="600" fontFamily="var(--font-sans)">ASP.NET</text>
+                  <text x="0" y="14" textAnchor="middle" fill="var(--foreground)" fontSize="10" fontWeight="600" fontFamily="var(--font-sans)">Core API</text>
+                  <text x="0" y="25" textAnchor="middle" fill="var(--muted-foreground)" fontSize="6.5">REST · JWT</text>
                 </g>
 
-                {/* Satellite Node 2: Top-Right (Payments EPay/OneInc) */}
-                <g transform="translate(355, 35)">
-                  <rect width="145" height="62" rx="8" fill="url(#nodeGrad)" stroke="var(--border)" strokeWidth="1" filter="url(#nodeShadow)" />
-                  <text x="14" y="21" fill="var(--terracotta)" fontSize="8.5" fontWeight="700" letterSpacing="0.08em">INTEGRATION</text>
-                  <text x="14" y="38" fill="var(--foreground)" fontSize="11.5" fontWeight="600" fontFamily="var(--font-sans)">EPay &amp; OneInc</text>
-                  <text x="14" y="51" fill="var(--muted-foreground)" fontSize="8.5">Payment Gateways</text>
+                {/* Node 2: Payment Gateways (Top-Right) */}
+                <g className="topo-node-group" transform="translate(468, 122)">
+                  <circle r="40" fill="url(#nodeBg)" stroke="var(--border)" strokeWidth="1.25" filter="url(#topoShadow)" />
+                  <circle r="35" fill="none" stroke="var(--bronze)" strokeWidth="0.75" strokeDasharray="2 3" opacity="0.5" />
+                  <text x="0" y="-12" textAnchor="middle" fill="var(--terracotta)" fontSize="7" fontWeight="700" letterSpacing="0.08em">CHECKOUT</text>
+                  <text x="0" y="2" textAnchor="middle" fill="var(--foreground)" fontSize="10.5" fontWeight="600" fontFamily="var(--font-sans)">Payments</text>
+                  <text x="0" y="14" textAnchor="middle" fill="var(--foreground)" fontSize="9.5" fontWeight="600" fontFamily="var(--font-sans)">EPay / OneInc</text>
+                  <text x="0" y="25" textAnchor="middle" fill="var(--muted-foreground)" fontSize="6.5">ACH &amp; Card</text>
                 </g>
 
-                {/* Satellite Node 3: Bottom-Left (SQL Server Database) */}
-                <g transform="translate(20, 233)">
-                  <rect width="145" height="62" rx="8" fill="url(#nodeGrad)" stroke="var(--border)" strokeWidth="1" filter="url(#nodeShadow)" />
-                  <text x="14" y="21" fill="var(--terracotta)" fontSize="8.5" fontWeight="700" letterSpacing="0.08em">PERSISTENCE</text>
-                  <text x="14" y="38" fill="var(--foreground)" fontSize="11.5" fontWeight="600" fontFamily="var(--font-sans)">SQL Server</text>
-                  <text x="14" y="51" fill="var(--muted-foreground)" fontSize="8.5">Ledger &amp; Stored Procs</text>
+                {/* Node 3: Wells Fargo SFTP Banking (Right) */}
+                <g className="topo-node-group" transform="translate(525, 260)">
+                  <circle r="40" fill="url(#nodeBg)" stroke="var(--border)" strokeWidth="1.25" filter="url(#topoShadow)" />
+                  <circle r="35" fill="none" stroke="var(--bronze)" strokeWidth="0.75" strokeDasharray="2 3" opacity="0.5" />
+                  <text x="0" y="-12" textAnchor="middle" fill="var(--terracotta)" fontSize="7" fontWeight="700" letterSpacing="0.08em">BANKING</text>
+                  <text x="0" y="2" textAnchor="middle" fill="var(--foreground)" fontSize="10" fontWeight="600" fontFamily="var(--font-sans)">Wells Fargo</text>
+                  <text x="0" y="14" textAnchor="middle" fill="var(--foreground)" fontSize="9.5" fontWeight="600" fontFamily="var(--font-sans)">SFTP Pipeline</text>
+                  <text x="0" y="25" textAnchor="middle" fill="var(--muted-foreground)" fontSize="6.5">Daily Direct Debit</text>
                 </g>
 
-                {/* Satellite Node 4: Bottom-Right (Hangfire & SFTP Banking) */}
-                <g transform="translate(355, 233)">
-                  <rect width="145" height="62" rx="8" fill="url(#nodeGrad)" stroke="var(--border)" strokeWidth="1" filter="url(#nodeShadow)" />
-                  <text x="14" y="21" fill="var(--terracotta)" fontSize="8.5" fontWeight="700" letterSpacing="0.08em">BACKGROUND JOBS</text>
-                  <text x="14" y="38" fill="var(--foreground)" fontSize="11.5" fontWeight="600" fontFamily="var(--font-sans)">Hangfire &amp; SFTP</text>
-                  <text x="14" y="51" fill="var(--muted-foreground)" fontSize="8.5">Wells Fargo Banking</text>
+                {/* Node 4: Hangfire Scheduler (Bottom-Right) */}
+                <g className="topo-node-group" transform="translate(468, 398)">
+                  <circle r="40" fill="url(#nodeBg)" stroke="var(--border)" strokeWidth="1.25" filter="url(#topoShadow)" />
+                  <circle r="35" fill="none" stroke="var(--bronze)" strokeWidth="0.75" strokeDasharray="2 3" opacity="0.5" />
+                  <text x="0" y="-12" textAnchor="middle" fill="var(--terracotta)" fontSize="7" fontWeight="700" letterSpacing="0.08em">SCHEDULER</text>
+                  <text x="0" y="2" textAnchor="middle" fill="var(--foreground)" fontSize="10.5" fontWeight="600" fontFamily="var(--font-sans)">Hangfire</text>
+                  <text x="0" y="14" textAnchor="middle" fill="var(--foreground)" fontSize="9.5" fontWeight="600" fontFamily="var(--font-sans)">Background Jobs</text>
+                  <text x="0" y="25" textAnchor="middle" fill="var(--muted-foreground)" fontSize="6.5">Recurring Cycles</text>
                 </g>
 
-                {/* Central Core Hub Node */}
-                <g transform="translate(260, 165)">
-                  <circle r="54" fill="url(#coreGrad)" stroke="var(--terracotta)" strokeWidth="1.75" filter="url(#nodeShadow)" />
-                  <circle r="46" fill="none" stroke="var(--border)" strokeWidth="1" strokeDasharray="2 3" opacity="0.65" />
-                  <text x="0" y="-16" textAnchor="middle" fill="var(--terracotta)" fontSize="7.5" fontWeight="700" letterSpacing="0.1em">CORE ENGINE</text>
-                  <text x="0" y="2" textAnchor="middle" fill="var(--foreground)" fontSize="13" fontWeight="600" fontFamily="var(--font-display)">BILLING</text>
-                  <text x="0" y="17" textAnchor="middle" fill="var(--foreground)" fontSize="13" fontWeight="600" fontFamily="var(--font-display)">CORE</text>
-                  <text x="0" y="32" textAnchor="middle" fill="var(--muted-foreground)" fontSize="8" letterSpacing="0.04em">P&amp;C Rules</text>
+                {/* Node 5: SQL Server Database (Bottom) */}
+                <g className="topo-node-group" transform="translate(330, 455)">
+                  <circle r="40" fill="url(#nodeBg)" stroke="var(--border)" strokeWidth="1.25" filter="url(#topoShadow)" />
+                  <circle r="35" fill="none" stroke="var(--bronze)" strokeWidth="0.75" strokeDasharray="2 3" opacity="0.5" />
+                  <text x="0" y="-12" textAnchor="middle" fill="var(--terracotta)" fontSize="7" fontWeight="700" letterSpacing="0.08em">PERSISTENCE</text>
+                  <text x="0" y="2" textAnchor="middle" fill="var(--foreground)" fontSize="10.5" fontWeight="600" fontFamily="var(--font-sans)">SQL Server</text>
+                  <text x="0" y="14" textAnchor="middle" fill="var(--foreground)" fontSize="9.5" fontWeight="600" fontFamily="var(--font-sans)">Database</text>
+                  <text x="0" y="25" textAnchor="middle" fill="var(--muted-foreground)" fontSize="6.5">ACID Ledgers</text>
+                </g>
+
+                {/* Node 6: Commission Engine (Bottom-Left) */}
+                <g className="topo-node-group" transform="translate(192, 398)">
+                  <circle r="40" fill="url(#nodeBg)" stroke="var(--border)" strokeWidth="1.25" filter="url(#topoShadow)" />
+                  <circle r="35" fill="none" stroke="var(--bronze)" strokeWidth="0.75" strokeDasharray="2 3" opacity="0.5" />
+                  <text x="0" y="-12" textAnchor="middle" fill="var(--terracotta)" fontSize="7" fontWeight="700" letterSpacing="0.08em">WORKFLOWS</text>
+                  <text x="0" y="2" textAnchor="middle" fill="var(--foreground)" fontSize="10.5" fontWeight="600" fontFamily="var(--font-sans)">Commission</text>
+                  <text x="0" y="14" textAnchor="middle" fill="var(--foreground)" fontSize="9.5" fontWeight="600" fontFamily="var(--font-sans)">Rules Engine</text>
+                  <text x="0" y="25" textAnchor="middle" fill="var(--muted-foreground)" fontSize="6.5">Broker Splits</text>
+                </g>
+
+                {/* Node 7: Automated Document Engine (Left) */}
+                <g className="topo-node-group" transform="translate(135, 260)">
+                  <circle r="40" fill="url(#nodeBg)" stroke="var(--border)" strokeWidth="1.25" filter="url(#topoShadow)" />
+                  <circle r="35" fill="none" stroke="var(--bronze)" strokeWidth="0.75" strokeDasharray="2 3" opacity="0.5" />
+                  <text x="0" y="-12" textAnchor="middle" fill="var(--terracotta)" fontSize="7" fontWeight="700" letterSpacing="0.08em">DISPATCH</text>
+                  <text x="0" y="2" textAnchor="middle" fill="var(--foreground)" fontSize="10.5" fontWeight="600" fontFamily="var(--font-sans)">PDF &amp; Email</text>
+                  <text x="0" y="14" textAnchor="middle" fill="var(--foreground)" fontSize="9.5" fontWeight="600" fontFamily="var(--font-sans)">Generation</text>
+                  <text x="0" y="25" textAnchor="middle" fill="var(--muted-foreground)" fontSize="6.5">Invoicing Docs</text>
+                </g>
+
+                {/* Node 8: Azure Telemetry (Top-Left) */}
+                <g className="topo-node-group" transform="translate(192, 122)">
+                  <circle r="40" fill="url(#nodeBg)" stroke="var(--border)" strokeWidth="1.25" filter="url(#topoShadow)" />
+                  <circle r="35" fill="none" stroke="var(--bronze)" strokeWidth="0.75" strokeDasharray="2 3" opacity="0.5" />
+                  <text x="0" y="-12" textAnchor="middle" fill="var(--terracotta)" fontSize="7" fontWeight="700" letterSpacing="0.08em">OBSERVABILITY</text>
+                  <text x="0" y="2" textAnchor="middle" fill="var(--foreground)" fontSize="10.5" fontWeight="600" fontFamily="var(--font-sans)">Azure APM</text>
+                  <text x="0" y="14" textAnchor="middle" fill="var(--foreground)" fontSize="9.5" fontWeight="600" fontFamily="var(--font-sans)">Insights</text>
+                  <text x="0" y="25" textAnchor="middle" fill="var(--muted-foreground)" fontSize="6.5">Live Telemetry</text>
+                </g>
+
+                {/* ================= CENTRAL CORE HUB ================= */}
+                <g className="topo-core-group" transform="translate(330, 260)">
+                  {/* Outer Concentric Pulse Rings */}
+                  <circle r="78" fill="none" stroke="var(--terracotta)" strokeWidth="1" strokeDasharray="3 5" opacity="0.45" />
+                  <circle r="72" fill="none" stroke="var(--bronze)" strokeWidth="0.75" opacity="0.35" />
+                  
+                  {/* Core Surface Orb */}
+                  <circle r="64" fill="url(#coreBg)" stroke="var(--terracotta)" strokeWidth="2.2" filter="url(#coreGlow)" />
+                  <circle r="56" fill="none" stroke="var(--bronze)" strokeWidth="1" strokeDasharray="2 4" opacity="0.6" />
+                  
+                  {/* Core Status Badge */}
+                  <circle cx="0" cy="-30" r="3" fill="#16a34a" />
+                  <text x="0" y="-20" textAnchor="middle" fill="var(--terracotta)" fontSize="7" fontWeight="800" letterSpacing="0.14em">CORE ENGINE</text>
+                  
+                  {/* Core Title */}
+                  <text x="0" y="1" textAnchor="middle" fill="var(--foreground)" fontSize="14" fontWeight="600" fontFamily="var(--font-display)">BILLING</text>
+                  <text x="0" y="17" textAnchor="middle" fill="var(--foreground)" fontSize="14" fontWeight="600" fontFamily="var(--font-display)">CORE</text>
+                  
+                  {/* Core Subtitle */}
+                  <text x="0" y="32" textAnchor="middle" fill="var(--muted-foreground)" fontSize="7" letterSpacing="0.04em">P&amp;C Rules &amp; Ledger</text>
+                  <text x="0" y="42" textAnchor="middle" fill="var(--terracotta)" fontSize="6.5" fontWeight="700" letterSpacing="0.06em">8+ CLIENTS LIVE</text>
                 </g>
               </svg>
-
-              <div className="diagram-footnote">
-                <span>Multi-tenant isolation</span>
-                <span>Automated ledger reconciliation</span>
-              </div>
             </div>
             <div className="artifact-tech">
               {billingTech.map((item) => (

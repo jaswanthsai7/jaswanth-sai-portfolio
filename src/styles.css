@@ -671,12 +671,13 @@ em { font-weight: 400; color: var(--terracotta); }
   position: absolute;
   inset: 0;
   z-index: 0;
+  opacity: .28;
+  background-image: 
+    radial-gradient(circle at 72% 50%, transparent 0 16%, var(--terracotta) 16.2% 16.6%, transparent 16.8% 30%, var(--bronze) 30.2% 30.5%, transparent 30.7% 46%, var(--bronze) 46.2% 46.4%, transparent 46.6%),
+    radial-gradient(circle at 72% 50%, transparent 0 62%, var(--terracotta) 62.1% 62.3%, transparent 62.5%);
   pointer-events: none;
-  background-image: radial-gradient(oklch(0.5 0.04 60 / 0.12) 1px, transparent 1px);
-  background-size: 24px 24px;
-  opacity: 0.45;
-  mask-image: radial-gradient(ellipse at 75% 50%, black 15%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse at 75% 50%, black 15%, transparent 75%);
+  mask-image: linear-gradient(90deg, transparent 4%, black 35%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 4%, black 35%);
 }
 
 .artifact-primary > * { position: relative; z-index: 1; }
@@ -688,90 +689,37 @@ em { font-weight: 400; color: var(--terracotta); }
 .artifact-tech { grid-column: 1 / -1; align-self: end; display: flex; flex-wrap: wrap; gap: .55rem; padding-top: 2rem; border-top: 1px solid var(--border); }
 .artifact-tech span { border: 1px solid var(--border); background: oklch(0.95 0.02 80 / .52); padding: .47rem .7rem; border-radius: .22rem; font-size: .66rem; text-transform: uppercase; letter-spacing: .06em; }
 
-.system-diagram-card {
+.system-diagram {
   position: relative;
-  background: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border);
-  border-radius: 0.65rem;
-  padding: 1.25rem 1.4rem;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 4px 24px -4px rgba(44, 34, 25, 0.06);
-}
-
-.diagram-topline {
+  width: 100%;
+  min-height: 440px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-bottom: 0.85rem;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 0.5rem;
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  justify-content: center;
+  overflow: visible;
 }
 
-.diagram-tag {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  color: var(--terracotta);
-}
-
-.diagram-tag-pulse {
-  width: 0.45rem;
-  height: 0.45rem;
-  border-radius: 50%;
-  background: var(--terracotta);
-  opacity: 0.8;
-}
-
-.diagram-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-weight: 600;
-  color: #15803d;
-  background: rgba(34, 197, 94, 0.12);
-  padding: 0.22rem 0.55rem;
-  border-radius: 9999px;
-  border: 1px solid rgba(34, 197, 94, 0.25);
-}
-
-.status-live-dot {
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 50%;
-  background: #16a34a;
-  animation: live-dot-pulse 2s infinite;
-}
-
-@keyframes live-dot-pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.85); }
-}
-
-.topology-svg {
+.system-topology-svg {
   width: 100%;
   height: auto;
+  max-width: 680px;
   display: block;
-  margin-block: 0.25rem;
+  overflow: visible;
+  filter: drop-shadow(0 8px 30px rgba(44, 34, 25, 0.06));
 }
 
-.diagram-footnote {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--border);
-  font-size: 0.65rem;
-  color: var(--muted-foreground);
-  letter-spacing: 0.04em;
+.topo-core-group {
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.topo-node-group {
+  transition: transform 0.25s ease, filter 0.25s ease;
+  cursor: default;
+}
+
+.topo-node-group:hover {
+  filter: brightness(1.06) drop-shadow(0 4px 12px rgba(184, 80, 66, 0.2));
 }
 .artifact-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
 .artifact-secondary, .artifact-tertiary {
