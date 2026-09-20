@@ -329,9 +329,9 @@ function Portfolio() {
                 <MapPin className="contact-chip-icon" />
                 <span>Navi Mumbai, Maharashtra</span>
               </span>
-              <a href="mailto:jaswanthsai7@gmail.com" className="hero-contact-chip hoverable">
+              <a href="mailto:jasvanthsai7@gmail.com" className="hero-contact-chip hoverable">
                 <Mail className="contact-chip-icon" />
-                <span>jaswanthsai7@gmail.com</span>
+                <span>jasvanthsai7@gmail.com</span>
               </a>
               <a href="tel:+917483649848" className="hero-contact-chip hoverable">
                 <Phone className="contact-chip-icon" />
@@ -852,8 +852,8 @@ function Portfolio() {
               <h2 id="contact-title">Let’s build something<br /><em>that lasts.</em></h2>
               <p>For enterprise platforms, scalable backends, thoughtful interfaces, and AI systems built to endure.</p>
               <div className="contact-links">
-                <a href="mailto:jaswanthsai7@gmail.com" aria-label="Send an email to jaswanthsai7@gmail.com">
-                  <Mail /><span>jaswanthsai7@gmail.com</span><ArrowUpRight />
+                <a href="mailto:jasvanthsai7@gmail.com" aria-label="Send an email to jaswanthsai7@gmail.com">
+                  <Mail /><span>jasvanthsai7@gmail.com</span><ArrowUpRight />
                 </a>
                 <a href="tel:+917483649848" aria-label="Call +91-7483649848">
                   <Phone /><span>+91-7483649848</span><ArrowUpRight />
